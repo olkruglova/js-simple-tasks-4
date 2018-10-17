@@ -38,5 +38,38 @@ but.onclick = function skrot(){
         news[i].innerHTML = str;
     }
 }
+/*
+task4: Дана таблица с числами. По нажатию на кнопку найдите ячейку, в которой хранится максимальное число, и сделайте ее фон красным.
+*/
+function max(){
+    let item = document.querySelectorAll('td');
+    let maxi = '';
+    let n = 0;
+    for(i=0;i<item.length;i++){
+        if(+item[i].innerHTML > maxi){
+            maxi = +item[i].innerHTML;
+            n = i;
+        }
+    }
+    item[n].style.backgroundColor = 'orange';
+}
+
+function min(){
+    let items = document.querySelectorAll('td');
+    let mini = '';
+    let arr = [];
+    let n = 0;
+    for(i=0;i<items.length;i++){
+        arr.push(items[i].innerHTML)
+    }
+    mini = Math.min.apply(Math, arr);
+    for(i=0;i<items.length;i++){
+        if(items[i].innerHTML == mini){
+            n=i;
+        }
+    }
+    items[n].style.backgroundColor = 'yellow';
+}
+
 
 
