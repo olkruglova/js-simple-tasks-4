@@ -1,4 +1,4 @@
-div, button{
+div, button, .row{
     margin-left: 20px;
 }
 hr {
@@ -9,4 +9,17 @@ hr {
 }
 input {
     margin-bottom: 12px;
+}
+.col-md-3 {
+    margin:0;
+}
+.news {
+    font-size: 16px;
+}
+.col-12 {
+    text-align: center;
+}
+.btn2{
+    margin-left:auto;
+    margin-right:auto;
 }
