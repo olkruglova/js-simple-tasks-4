@@ -23,10 +23,15 @@ input {
     margin-left:auto;
     margin-right:auto;
 }
-table {
+#table1 {
     width: 50%;
     margin-left:auto;
     margin-right:auto;
+    margin-bottom:15px;
+    border: 0.5px solid gray;
+}
+#table2 {
+    width: 50%;
     margin-bottom:15px;
     border: 0.5px solid gray;
 }
@@ -40,4 +45,11 @@ td{
 }
 .btn4 {
     background-color: yellow;
+}
+.lista-liczb {
+    width: 475px;
+    border: 2px solid pink;
+}
+.button5, .output {
+    display: inline-block;
 }

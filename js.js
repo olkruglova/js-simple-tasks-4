@@ -42,7 +42,7 @@ but.onclick = function skrot(){
 task4: Дана таблица с числами. По нажатию на кнопку найдите ячейку, в которой хранится максимальное число, и сделайте ее фон красным.
 */
 function max(){
-    let item = document.querySelectorAll('td');
+    let item = document.querySelectorAll('.item');
     let maxi = '';
     let n = 0;
     for(i=0;i<item.length;i++){
@@ -55,7 +55,7 @@ function max(){
 }
 
 function min(){
-    let items = document.querySelectorAll('td');
+    let items = document.querySelectorAll('.item');
     let mini = '';
     let arr = [];
     let n = 0;
@@ -70,6 +70,25 @@ function min(){
     }
     items[n].style.backgroundColor = 'yellow';
 }
+/*
+task5: Дана таблица с числами. По нажатию на кнопку в инпут под таблицей выведите эти числа через запятую в порядке возрастания.
+*/
+$('.btn5').on('click', function(){
+    var items = $('.item1');
+    var arr = [];
+    var output = document.querySelector('.lista-liczb');
+    console.log(output.value);
+    for(var i=0;i<items.length;i++){
+        arr.push(items[i].innerHTML);
+    }
+    console.log(arr);
+    var arrNew = arr.sort(function(a, b) {
+        return a - b;
+        });
+    var str = arr.join(', ');
+    output.value = str;
+    console.log(str);
+})
 
 
 
