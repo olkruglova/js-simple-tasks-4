@@ -89,6 +89,32 @@ $('.btn5').on('click', function(){
     output.value = str;
     console.log(str);
 })
+/*
+task6: Дана таблица с числами. По нажатию на кнопку в последний ряд таблицы в каждую ячейку запишите сумму чисел в столбце таблицы, расположенном над определенной ячейкой.
+*/
+$('.btn6').on('click', function(){
+    var rows = $('.tr2');
+    var arr = [];
+	for (var i = 0; i < rows.length-1; i++) {
+		for(var j = 0; j < rows[i].children.length; j++) {
+			if (arr[j] == undefined) {
+				arr[j] = 0;
+			}
+			arr[j] += Number(rows[i].children[j].innerHTML);
+		}
+	}
+	for (var k = 0; k < rows[rows.length-1].children.length; k++) {
+		rows[rows.length-1].children[k].innerHTML = arr[k];
+	}
+    //var elementChildrens = document.querySelector('.tr22').children;
+    //for (var i=0, child; child=elementChildrens[i]; i++) {
+    //elementChildrens - коллеция детей списка
+    //child - последовательно, каждый из элементов elementChildrens
+    //console.log(child.innerHTML);
+});
+
+
+
 
 
 
