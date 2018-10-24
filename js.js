@@ -112,7 +112,25 @@ $('.btn6').on('click', function(){
     //child - последовательно, каждый из элементов elementChildrens
     //console.log(child.innerHTML);
 });
-
+/*
+task8:  Дана таблица с числами. По нажатию на ячейку она активируется и становится красного цвета. Активировать можно много ячеек. Под таблицей кнопка. По нажатию по этой кнопке в абзац ниже выведите сумма активированных ячеек. Реализуйте кнопку 'сбросить активированные ячейки'.
+*/
+let items = $('.item3');
+let summ = 0;
+let needToSum;
+items.on('click', function(){
+    $(this).addClass('colored');
+});
+$('.btn7').on('click', function(){
+    $('.item3.colored').each(function() {
+        summ += Number($(this).text());
+    });
+    $('.sum-items').val(summ);
+})
+$('.btn8').on('click', function(){
+    items.removeClass('colored');
+    $('.sum-items').val(0);
+})
 
 
 
