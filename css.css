@@ -30,7 +30,7 @@ input {
     margin-bottom:15px;
     border: 0.5px solid gray;
 }
-#table2, #table3 {
+#table2, #table3{
     width: 50%;
     margin-bottom:15px;
     border: 0.5px solid gray;
@@ -59,4 +59,20 @@ td{
 }
 .colored {
     background-color: red;
+}
+#table4 {
+    width: 100%;
+    margin-bottom:15px;
+    border: 0.5px solid gray;
+}
+td.item4 {
+    width: 200px;
+}
+.input9{
+    width: 50px;
+    margin: 5px;
+}
+.btn9 {
+    height: 25px;
+    padding: 0  5px !important;
 }

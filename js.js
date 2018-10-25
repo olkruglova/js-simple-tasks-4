@@ -131,6 +131,29 @@ $('.btn8').on('click', function(){
     items.removeClass('colored');
     $('.sum-items').val(0);
 })
+/*
+task9: Дана таблица. По нажатию на ячейку в ней появляется инпут с содержимым этой ячейки и кнопка сохранить. Можно поредактировать текст в инпуте, сохранить - и текст ячейки поменяется.
+*/
+
+$('.item4').click(function(event){
+    let value = $(this).text();
+    let value2;
+    this.innerHTML = '<input class="input9" type="text" value="' + value+ '"> <button class="btn btn9">Zapisz</button>';
+    $('.input9').text(value);
+    $(this).off(event);
+    $('.input9').change(function(){
+    value2 = $(this).val();
+    })
+    $('.btn9').click(function(){
+        console.log(value2);
+        this.parentElement.innerHTML = value2;
+        $(this).prev().remove();
+        $(this).remove();
+    })
+    $(this).on(event);
+})
+
+
 
 
 
